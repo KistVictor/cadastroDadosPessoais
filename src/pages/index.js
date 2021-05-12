@@ -1,5 +1,10 @@
-import React from "react"
+import React, { Component } from "react";
+import FormularioCadastro from "./components/FormularioCadastro/FormularioCadastro";
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+    <>
+      <FormularioCadastro />
+    </>
+  );
 }
