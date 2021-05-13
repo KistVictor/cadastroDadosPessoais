@@ -20,7 +20,7 @@ function FormularioCadastro() {
       <input type="checkbox" />
 
       <button type="submit">Cadastrar</button>
-      <div class="w-24 ..."></div>
+      <div className="w-64 h-3 bg-gradient-to-br from-fuchsia-500 to-purple-600"></div>
     </form>
   );
 }
