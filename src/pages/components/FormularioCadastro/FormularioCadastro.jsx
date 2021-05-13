@@ -1,5 +1,9 @@
 import React from "react";
-import './src/styles/global.css';
+import tw, { styled } from "twin.macro"
+
+const Button = tw.button`
+  bg-blue-500 hover:bg-blue-800 text-white p-2 rounded
+`
 
 function FormularioCadastro() {
   return (
@@ -19,8 +23,7 @@ function FormularioCadastro() {
       <label>Novidades</label>
       <input type="checkbox" />
 
-      <button type="submit">Cadastrar</button>
-      <div className="w-64 h-3 bg-gradient-to-br from-fuchsia-500 to-purple-600"></div>
+      <Button type="submit">Activate</Button>
     </form>
   );
 }
