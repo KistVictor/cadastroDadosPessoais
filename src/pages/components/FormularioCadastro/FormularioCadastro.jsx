@@ -1,4 +1,5 @@
 import React from "react";
+import './src/styles/global.css';
 
 function FormularioCadastro() {
   return (
@@ -19,6 +20,7 @@ function FormularioCadastro() {
       <input type="checkbox" />
 
       <button type="submit">Cadastrar</button>
+      <div class="w-24 ..."></div>
     </form>
   );
 }
