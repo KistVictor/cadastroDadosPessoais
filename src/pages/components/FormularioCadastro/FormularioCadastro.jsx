@@ -3,9 +3,9 @@ import React from "react"
 function FormularioCadastro() {
   return (
     <>
-      <div className="bg-gray-50">
+      <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
         <form class="space-y-4">
-
+          
           
           <label className="text-indigo-600 block">Nome</label>
           <input
