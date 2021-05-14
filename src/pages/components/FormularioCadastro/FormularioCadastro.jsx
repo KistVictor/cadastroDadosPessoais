@@ -1,39 +1,44 @@
 import React from "react"
-import tw, { styled } from "twin.macro"
-
-const Button = tw.button`
-  bg-purple-600 hover:bg-purple-700 text-white px-2 py-1 rounded
-`
-
-const Label = tw.label`
-  text-indigo-600
-`
-
-const Input = tw.input`
-  box-content h-5 w-5 text-gray-600
-`
 
 function FormularioCadastro() {
   return (
     <>
-      <form>
-        <Label>Nome</Label>
-        <input type="text" />
+      <div className="bg-gray-50">
+        <form class="space-y-4">
 
-        <Label>Sobrenome</Label>
-        <input type="text" />
+          
+          <label className="text-indigo-600 block">Nome</label>
+          <input
+            type="text"
+            className="border rounded-md border-indigo-500 border-opacity-25 block"
+          />
 
-        <Label>CPF</Label>
-        <input type="text" />
+          <label className="text-indigo-600 block">Sobrenome</label>
+          <input
+            type="text"
+            className="border rounded-md border-indigo-500 border-opacity-25 block"
+          />
 
-        <Label>Promoções</Label>
-        <input type="checkbox" checked />
+          <label className="text-indigo-600 block">CPF</label>
+          <input
+            type="text"
+            className="border rounded-md border-indigo-500 border-opacity-25 block"
+          />
 
-        <Label>Novidades</Label>
-        <Input type="checkbox" checked />
+          <label className="text-indigo-600">Promoções</label>
+          <input type="checkbox" className="mx-3" />
 
-        <Button type="submit">Cadastrar</Button>
-      </form>
+          <label className="text-indigo-600">Novidades</label>
+          <input type="checkbox" className="mx-3" />
+
+          <button
+            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+            type="submit"
+          >
+            Cadastrar
+          </button>
+        </form>
+      </div>
     </>
   )
 }

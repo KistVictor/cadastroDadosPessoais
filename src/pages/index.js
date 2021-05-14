@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FormularioCadastro from "./components/FormularioCadastro/FormularioCadastro";
-import "tailwindcss/dist/base.min.css"
+import "../css/index.css"
 
 export default function Home() {
   return (
