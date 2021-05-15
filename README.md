@@ -1,8 +1,8 @@
 # gatsbyForm
-
 <p align="center">
 <img src="./img/layout inicial.png" alt="layout inicial"/>
-
+</p>
+<p align="center">
 Tecnologias:
 </p>
 <p align="center">
