@@ -4,34 +4,38 @@ function FormularioCadastro() {
   return (
     <>
       <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-        <form className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4"> 
+        <form className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
           <div className="flex-shrink-0">
-            <label className="text-indigo-600 block">Nome</label>
+
             <input
               type="text"
-              className="border rounded-md border-indigo-500 border-opacity-25 block"
+              required
+              placeholder="Nome"
+              className="border shadow rounded-md border-indigo-700 border-opacity-50 block px-2 mt-1 max-w-lg mx-auto"
             />
 
-            <label className="text-indigo-600 block">Sobrenome</label>
             <input
               type="text"
-              className="border rounded-md border-indigo-500 border-opacity-25 block"
+              required
+              placeholder="Sobrenome"
+              className="border shadow rounded-md border-indigo-700 border-opacity-50 block px-2 my-5 max-w-lg mx-auto"
             />
 
-            <label className="text-indigo-600 block">CPF</label>
             <input
               type="text"
-              className="border rounded-md border-indigo-500 border-opacity-25 block"
+              required
+              placeholder="CPF"
+              className="border shadow rounded-md border-indigo-700 border-opacity-50 block px-2 mb-5 max-w-lg mx-auto"
             />
 
-            <label className="text-indigo-600">Promoções</label>
-            <input type="checkbox" className="mx-3" />
+            <label className="text-indigo-500">Promoções</label>
+            <input type="checkbox" className="mx-3"></input>
 
-            <label className="text-indigo-600">Novidades</label>
+            <label className="text-indigo-500">Novidades</label>
             <input type="checkbox" className="mx-3" />
 
             <button
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+              className="inline-flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
               type="submit"
             >
               Cadastrar
