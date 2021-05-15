@@ -4,7 +4,7 @@ function FormularioCadastro() {
   return (
     <>
       <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-        <form className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+        <form className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4"> 
           <div className="flex-shrink-0">
             <label className="text-indigo-600 block">Nome</label>
             <input
