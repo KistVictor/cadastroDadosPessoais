@@ -7,6 +7,7 @@ function FormularioCadastro() {
   const [promocoes, setPromocoes] = useState(true)
   const [novidades, setNovidades] = useState(true)
 
+
   return (
     <>
       <div className="min-h-screen bg-indigo-100 py-6 flex flex-col justify-center sm:py-12">
@@ -56,22 +57,24 @@ function FormularioCadastro() {
             />
 
             <label className="text-indigo-500">Promoções</label>
+
             <input
               type="checkbox"
+              checked={promocoes}
               onChange={event => {
-                setPromocoes(event.value.checked)
+                setPromocoes(event.target.checked)
               }}
-              defaultChecked={promocoes}
               className="mx-3"
             ></input>
 
             <label className="text-indigo-500">Novidades</label>
+
             <input
               type="checkbox"
+              checked={novidades}
               onChange={event => {
-                setNovidades(event.value.checked)
+                setNovidades(event.target.checked)
               }}
-              defaultChecked={novidades}
               className="mx-3"
             ></input>
 
