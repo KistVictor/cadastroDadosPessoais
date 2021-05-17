@@ -1,13 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
 
 function FormularioCadastro() {
+
+  const [nome, setNome] = useState("Victor")
+
+
   return (
     <>
-      <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-        <form className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+      <div className="min-h-screen bg-indigo-100 py-6 flex flex-col justify-center sm:py-12">
+        <form
+          onSubmit={(event) => {
+            event.preventDefault()
+            console.log(nome)
+          }}
+          className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
           <div className="flex-shrink-0">
 
+            <h1 className="text-indigo-600 text-center pb-3 text-3xl font-bold">Formulario de cadastro</h1>
+
             <input
+              value={nome}
+              onChange={(event) => {
+                setNome(event.target.value)
+                setNome(nome)
+              }}
               type="text"
               required
               placeholder="Nome"
@@ -32,10 +48,10 @@ function FormularioCadastro() {
             <input type="checkbox" className="mx-3"></input>
 
             <label className="text-indigo-500">Novidades</label>
-            <input type="checkbox" className="mx-3" />
+            <input type="checkbox" className="mx-3"></input>
 
             <button
-              className="inline-flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+              className="inline-flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 hover:shadow-md"
               type="submit"
             >
               Cadastrar
