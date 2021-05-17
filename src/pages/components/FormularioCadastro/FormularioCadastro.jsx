@@ -1,28 +1,31 @@
 import React, { useState } from "react"
 
 function FormularioCadastro() {
-
-  const [nome,setNome] = useState("Victor")
+  const [nome, setNome] = useState("")
+  const [sobrenome, setSobrenome] = useState("")
+  const [cpf, setCpf] = useState("")
+  const [promocoes, setPromocoes] = useState(true)
+  const [novidades, setNovidades] = useState(true)
 
   return (
     <>
       <div className="min-h-screen bg-indigo-100 py-6 flex flex-col justify-center sm:py-12">
         <form
-          onSubmit={(event) => {
+          onSubmit={event => {
             event.preventDefault()
-            console.log(nome)
+            console.log(nome, sobrenome, cpf)
           }}
-          className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+          className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4"
+        >
           <div className="flex-shrink-0">
-
-            <h1 className="text-indigo-600 text-center pb-3 text-3xl font-bold">Formulario de cadastro</h1>
+            <h1 className="text-indigo-600 text-center pb-3 text-3xl font-bold">
+              Formulario de cadastro
+            </h1>
 
             <input
               value={nome}
-              onChange={(event) => {
+              onChange={event => {
                 setNome(event.target.value)
-                if (nome.length >= 3)
-                  setNome(nome.substring(0, 3))
               }}
               type="text"
               required
@@ -31,6 +34,10 @@ function FormularioCadastro() {
             />
 
             <input
+              value={sobrenome}
+              onChange={event => {
+                setSobrenome(event.target.value)
+              }}
               type="text"
               required
               placeholder="Sobrenome"
@@ -38,6 +45,10 @@ function FormularioCadastro() {
             />
 
             <input
+              value={cpf}
+              onChange={event => {
+                setCpf(event.target.value)
+              }}
               type="text"
               required
               placeholder="CPF"
@@ -45,10 +56,24 @@ function FormularioCadastro() {
             />
 
             <label className="text-indigo-500">Promoções</label>
-            <input type="checkbox" className="mx-3"></input>
+            <input
+              type="checkbox"
+              onChange={event => {
+                setPromocoes(event.value.checked)
+              }}
+              defaultChecked={promocoes}
+              className="mx-3"
+            ></input>
 
             <label className="text-indigo-500">Novidades</label>
-            <input type="checkbox" className="mx-3"></input>
+            <input
+              type="checkbox"
+              onChange={event => {
+                setNovidades(event.value.checked)
+              }}
+              defaultChecked={novidades}
+              className="mx-3"
+            ></input>
 
             <button
               className="inline-flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 hover:shadow-md"
