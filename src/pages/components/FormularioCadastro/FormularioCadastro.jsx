@@ -2,8 +2,7 @@ import React, { useState } from "react"
 
 function FormularioCadastro() {
 
-  const [nome, setNome] = useState("Victor")
-
+  const [nome,setNome] = useState("Victor")
 
   return (
     <>
@@ -22,7 +21,8 @@ function FormularioCadastro() {
               value={nome}
               onChange={(event) => {
                 setNome(event.target.value)
-                setNome(nome)
+                if (nome.length >= 3)
+                  setNome(nome.substring(0, 3))
               }}
               type="text"
               required
