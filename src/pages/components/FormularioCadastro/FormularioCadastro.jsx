@@ -13,7 +13,7 @@ function FormularioCadastro() {
         <form
           onSubmit={event => {
             event.preventDefault()
-            console.log(nome, sobrenome, cpf)
+            console.log(nome, sobrenome, cpf, promocoes, novidades)
           }}
           className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4"
         >
