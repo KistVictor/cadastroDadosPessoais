@@ -53,6 +53,9 @@ function FormularioCadastro({aoEnviar}) { //esta sendo pego apenas o props aoEnv
               }}
               type="text"
               required
+              maxlength="11"
+              minlength="11"
+              title="Este campo deve ter 11 dígitos"
               placeholder="CPF"
               className="border shadow rounded-md border-indigo-700 border-opacity-50 block px-2 mb-5 max-w-lg mx-auto"
             />
