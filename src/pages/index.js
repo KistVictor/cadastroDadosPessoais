@@ -5,7 +5,11 @@ import "../css/index.css"
 export default function Home() {
   return (
     <>
-      <FormularioCadastro />
+      <FormularioCadastro aoEnviar={enviarForm}/>
     </>
   );
+
+  function enviarForm(dados){
+    console.log(dados)
+  }
 }

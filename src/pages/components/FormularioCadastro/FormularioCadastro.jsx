@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-function FormularioCadastro() {
+function FormularioCadastro({aoEnviar}) { //esta sendo pego apenas o props aoEnviar
   const [nome, setNome] = useState("")
   const [sobrenome, setSobrenome] = useState("")
   const [cpf, setCpf] = useState("")
@@ -14,10 +14,11 @@ function FormularioCadastro() {
         <form
           onSubmit={event => {
             event.preventDefault()
-            console.log(nome, sobrenome, cpf, promocoes, novidades)
+            aoEnviar({nome, sobrenome, cpf, promocoes, novidades})
           }}
           className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4"
         >
+          
           <div className="flex-shrink-0">
             <h1 className="text-indigo-600 text-center pb-3 text-3xl font-bold">
               Formulario de cadastro
