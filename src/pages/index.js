@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import FormularioCadastro from "./components/FormularioCadastro/FormularioCadastro";
 import "../css/index.css"
 

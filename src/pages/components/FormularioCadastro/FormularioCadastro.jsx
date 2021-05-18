@@ -1,27 +1,26 @@
 import React, { useState } from "react"
 
-function FormularioCadastro({aoEnviar}) { //esta sendo pego apenas o props aoEnviar
+function FormularioCadastro({ aoEnviar }) {
+  //esta sendo pego apenas o props aoEnviar
   const [nome, setNome] = useState("")
   const [sobrenome, setSobrenome] = useState("")
   const [cpf, setCpf] = useState("")
   const [promocoes, setPromocoes] = useState(true)
   const [novidades, setNovidades] = useState(true)
 
-
   return (
     <>
-      <div className="min-h-screen bg-indigo-100 py-6 flex flex-col justify-center sm:py-12">
+      <div className="font-mono min-h-screen bg-gradient-to-br from-indigo-300 to-purple-500 py-6 flex flex-col justify-center sm:py-12">
         <form
           onSubmit={event => {
             event.preventDefault()
-            aoEnviar({nome, sobrenome, cpf, promocoes, novidades})
+            aoEnviar({ nome, sobrenome, cpf, promocoes, novidades })
           }}
           className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4"
         >
-          
           <div className="flex-shrink-0">
             <h1 className="text-indigo-600 text-center pb-3 text-3xl font-bold">
-              Formulario de cadastro
+              Dados pessoas
             </h1>
 
             <input
@@ -55,14 +54,15 @@ function FormularioCadastro({aoEnviar}) { //esta sendo pego apenas o props aoEnv
               required
               maxlength="11"
               minlength="11"
-              title="Este campo deve ter 11 dígitos"
               placeholder="CPF"
               className="border shadow rounded-md border-indigo-700 border-opacity-50 block px-2 mb-5 max-w-lg mx-auto"
             />
 
-            <label className="text-indigo-500">Promoções</label>
-
+            <label htmlFor="promocoes" className="text-indigo-500">
+              Promoções
+            </label>
             <input
+              id="promocoes"
               type="checkbox"
               checked={promocoes}
               onChange={event => {
@@ -71,9 +71,11 @@ function FormularioCadastro({aoEnviar}) { //esta sendo pego apenas o props aoEnv
               className="mx-3"
             ></input>
 
-            <label className="text-indigo-500">Novidades</label>
-
+            <label htmlFor="novidades" className="text-indigo-500">
+              Novidades
+            </label>
             <input
+              id="novidades"
               type="checkbox"
               checked={novidades}
               onChange={event => {
