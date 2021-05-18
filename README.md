@@ -1,6 +1,7 @@
 # gatsbyForm
 <p align="center">
 <img src="./img/layout inicial.png" alt="layout inicial"/>
+<img src="./img/projeto.gif" alt="gif projeto"/>
 </p>
 <p align="center">
 Tecnologias:

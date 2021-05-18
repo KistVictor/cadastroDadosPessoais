@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 function FormularioCadastro({ aoEnviar }) {
-  //esta sendo pego apenas o props aoEnviar
+  //esta sendo pego apenas o props 'aoEnviar'
   const [nome, setNome] = useState("")
   const [sobrenome, setSobrenome] = useState("")
   const [cpf, setCpf] = useState("")
